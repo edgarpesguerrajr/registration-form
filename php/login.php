@@ -33,20 +33,8 @@ if(isset($_POST["submit"])){
   <title>Login</title>
   <link rel="stylesheet" href="../css/login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    .password-container {
-      position: relative;
-    }
-
-    .eye-icon {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      cursor: pointer;
-    }
-  </style>
 </head>
+
 <body>
   <h2>Login</h2>
   <form action="" method="post" autocomplete="off">
@@ -56,9 +44,9 @@ if(isset($_POST["submit"])){
     <div class="password-container">
       <label for="password">Password:</label>
       <input type="password" name="password" id="password" required value="">
-      <!-- Add the eye icon for password visibility toggle -->
+
       <span class="eye-icon" onclick="togglePasswordVisibility()">
-        👁️
+        <i id="eye-icon" class="fas fa-eye"></i>
       </span>
     </div>
     <br>
@@ -71,10 +59,16 @@ if(isset($_POST["submit"])){
   <script>
     function togglePasswordVisibility() {
       var passwordInput = document.getElementById('password');
+      var eyeIcon = document.getElementById('eye-icon');
+
       if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
+        eyeIcon.classList.remove('fa-eye-slash');
+        eyeIcon.classList.add('fa-eye');
       } else {
         passwordInput.type = 'password';
+        eyeIcon.classList.remove('fa-eye');
+        eyeIcon.classList.add('fa-eye-slash');
       }
     }
   </script>

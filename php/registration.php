@@ -37,7 +37,9 @@ if(isset($_POST["submit"])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration</title>
   <link rel="stylesheet" href="../css/registration.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
   <h2>Registration</h2>
   <form class="" action="" method="post" autocomplete="off" >
@@ -50,15 +52,43 @@ if(isset($_POST["submit"])){
     <label for="email">Email : </label>
     <input type="email" name="email" id="email" required value=""> <br>
 
-    <label for="password">Password : </label>
-    <input type="password" name="password" id="password" required value=""> <br>
+    <div class="password-container">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required value="">
+      <span class="eye-icon" onclick="togglePasswordVisibility('password', 'eye-icon')">
+        <i id="eye-icon" class="fas fa-eye"></i>
+      </span>
+    </div>
 
     <label for="confirmpassword">Confirm Password : </label>
-    <input type="password" name="confirmpassword" id="confirmpassword" required value=""> <br>
+    <div class="password-container">
+      <input type="password" name="confirmpassword" id="confirmpassword" required value="">
+      <span class="eye-icon" onclick="togglePasswordVisibility('confirmpassword', 'eye-icon-confirmpassword')">
+        <i id="eye-icon-confirmpassword" class="fas fa-eye"></i>
+      </span>
+    </div>
 
     <button type="submit" name="submit" >REGISTER</button>
   </form>
   <br>
   <a href="login.php">Login</a>
+
+
+  <script>
+    function togglePasswordVisibility(inputId, iconId) {
+      var passwordInput = document.getElementById(inputId);
+      var eyeIcon = document.getElementById(iconId);
+
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.classList.remove('fa-eye-slash');
+        eyeIcon.classList.add('fa-eye');
+      } else {
+        passwordInput.type = 'password';
+        eyeIcon.classList.remove('fa-eye');
+        eyeIcon.classList.add('fa-eye-slash');
+      }
+    }
+  </script>
 </body>
 </html>

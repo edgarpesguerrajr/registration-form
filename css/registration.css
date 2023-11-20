@@ -34,17 +34,17 @@ h2 {
 }
 
 form {
-  max-width: 400px;
+  max-width: 500px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.537);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: left; /* Align the form elements to the left */
+  text-align: left;
 }
 
 label {
-  display: inline-block; /* Display labels inline-block to control their width */
-  width: 100%; /* Set the width to 100% to ensure labels are full-width */
+  display: inline-block;
+  width: 100%;
   margin-bottom: 8px;
 }
 
@@ -79,4 +79,17 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.password-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  transform: translateY(-250%);
+  cursor: pointer;
+  color: #7C002D;
 }

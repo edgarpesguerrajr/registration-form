@@ -1,8 +1,7 @@
-/* Reset some default styles */
 body, h2, form, label, input, button, a {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Include box-sizing for consistent sizing */
+  box-sizing: border-box; 
 }
 
 body {
@@ -10,11 +9,11 @@ body {
   background: url("images/bg_index.jpg") center/cover no-repeat fixed;
   color: #fff;
   display: flex;
-  flex-direction: column; /* Align elements in a column */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 body::before {
@@ -81,4 +80,16 @@ a:hover {
   text-decoration: underline;
 }
 
+.password-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #7C002D;
+}
 
