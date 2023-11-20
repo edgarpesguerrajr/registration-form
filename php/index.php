@@ -19,7 +19,9 @@ else{
   <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-  <h1>Welcome <?php echo $row["name"]; ?> your email is <?php echo $row["email"]; ?></h1>
-  <a href="logout.php">logout</a>
+  <div class="container">
+    <h1>Welcome <span class="highlight"><?php echo $row["name"]; ?></span>! Your email is <span class="highlight"> <?php echo $row["email"]; ?></span></h1>
+    <a href="logout.php">LOGOUT</a>
+  </div>
 </body>
 </html>

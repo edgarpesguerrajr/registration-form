@@ -32,19 +32,51 @@ if(isset($_POST["submit"])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .password-container {
+      position: relative;
+    }
+
+    .eye-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-<h2>Login</h2>
-<form class="" action="" method="post" autocomplete="off" >
-    <label for="usernameemail">Username or Email : </label>
+  <h2>Login</h2>
+  <form action="" method="post" autocomplete="off">
+    <label for="usernameemail">Username or Email:</label>
     <input type="text" name="usernameemail" id="usernameemail" required value=""> <br>
+    
+    <div class="password-container">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required value="">
+      <!-- Add the eye icon for password visibility toggle -->
+      <span class="eye-icon" onclick="togglePasswordVisibility()">
+        👁️
+      </span>
+    </div>
+    <br>
 
-    <label for="password">Password : </label>
-    <input type="password" name="password" id="password" required value=""> <br>
-
-    <button type="submit" name="submit" >Login</button>
+    <button type="submit" name="submit">LOGIN</button>
   </form>
   <br>
   <a href="registration.php">Register</a>
+
+  <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById('password');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    }
+  </script>
 </body>
 </html>
