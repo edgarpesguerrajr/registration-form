@@ -53,10 +53,10 @@ if(isset($_POST["submit"])){
     <input type="email" name="email" id="email" required value=""> <br>
 
     <div class="password-container">
-      <label for="password">Password:</label>
+      <label for="password">Password :</label>
       <input type="password" name="password" id="password" required value="">
       <span class="eye-icon" onclick="togglePasswordVisibility('password', 'eye-icon')">
-        <i id="eye-icon" class="fas fa-eye"></i>
+        <i id="eye-icon" class="fas fa-eye fa-eye-slash"></i>
       </span>
     </div>
 
@@ -64,7 +64,7 @@ if(isset($_POST["submit"])){
     <div class="password-container">
       <input type="password" name="confirmpassword" id="confirmpassword" required value="">
       <span class="eye-icon" onclick="togglePasswordVisibility('confirmpassword', 'eye-icon-confirmpassword')">
-        <i id="eye-icon-confirmpassword" class="fas fa-eye"></i>
+        <i id="eye-icon-confirmpassword" class="fas fa-eye fa-eye-slash"></i>
       </span>
     </div>
 

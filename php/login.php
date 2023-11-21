@@ -38,15 +38,15 @@ if(isset($_POST["submit"])){
 <body>
   <h2>Login</h2>
   <form action="" method="post" autocomplete="off">
-    <label for="usernameemail">Username or Email:</label>
+    <label for="usernameemail">Username or Email :</label>
     <input type="text" name="usernameemail" id="usernameemail" required value=""> <br>
     
     <div class="password-container">
-      <label for="password">Password:</label>
+      <label for="password">Password :</label>
       <input type="password" name="password" id="password" required value="">
 
       <span class="eye-icon" onclick="togglePasswordVisibility()">
-        <i id="eye-icon" class="fas fa-eye"></i>
+        <i id="eye-icon" class="fas fa-eye fa-eye-slash"></i>
       </span>
     </div>
     <br>
